@@ -18,13 +18,19 @@ namespace RayCasting
 
         public Color Color;
 
-        public Sphere(float xc, float yc, float zc, float r, Color color)
+        public double Kd;  //difusse   - rozproszone
+        public double Ks;  //specular  - zwierciadlane
+
+
+        public Sphere(float xc, float yc, float zc, float r, Color color, double kd, double ks)
         {
             Xc = xc;
             Yc = yc;
             Zc = zc;
             R = r;
             Color = color;
+            Kd = kd;
+            Ks = ks;
         }
 
         public (bool, float) Intersect(float xr, float yr)
